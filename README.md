@@ -19,8 +19,8 @@ sudo usermod -aG docker metics
 mkdir -p .che
 mkdir -p che/temp/fs-root
 git clone https://github.com/jobcespedes/che-docker-allplugins.git che/docker
-chmod 757 -R .che
-chmod 757 -R che/temp/fs-root
+chmod -R 757 .che
+chmod -R 757 che/temp/fs-root
 ```
 ### Build the image
 ```bash
