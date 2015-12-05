@@ -23,7 +23,7 @@ sudo usermod -aG docker metics
 ```bash
 mkdir -p .che
 mkdir -p che/temp/fs-root
-git clone https://github.com/jobcespedes/che-docker-allplugins.git che/docker
+git clone https://github.com/freewind/che-docker-allplugins che/docker
 chmod -R 757 .che
 chmod -R 757 che/temp/fs-root
 ```
@@ -40,5 +40,5 @@ docker build -t "mydocker/che:3.12.2-plugins" -f che/docker/Dockerfile che/docke
 docker run -it -p 8080:8080 -p 49152-49162:49152-49162 \
   -v ~/.che:/home/user/.che \
   -v ~/che/temp/fs-root:/home/user/che/temp/fs-root \
-  -v ~/.che:/home/user/che/temp/local-storage mydocker/che:addplugins
+  -v ~/.che:/home/user/che/temp/local-storage mydocker/che:3.12.2-plugins
 ```
